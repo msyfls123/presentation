@@ -1,0 +1,28 @@
+{
+  "name": "presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "marp --html",
+    "start": "marp --html -s"
+  },
+  "marp": {
+    "inputDir": "./slides",
+    "output": "./public",
+    "themeSet": "./themes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msyfls123/presentation.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msyfls123/presentation/issues"
+  },
+  "homepage": "https://github.com/msyfls123/presentation#readme",
+  "dependencies": {
+    "@marp-team/marp-cli": "^3.2.0"
+  }
+}
