@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "marp --html",
+    "build": "marp --html && cp -r ./slides/images ./public",
     "start": "marp --html -s"
   },
   "marp": {
