@@ -1,0 +1,13 @@
+/* @theme custom */
+
+@import-theme 'gaia';
+
+.mermaid.center {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.column-2 {
+    column-count: 2;
+}

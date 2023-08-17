@@ -1,5 +1,5 @@
 ---
-theme: gaia
+theme: custom
 marp: true
 _class: lead
 math: katex
@@ -64,20 +64,86 @@ _class: lead
 Markdown-to-PDF editor
 
 ---
+<style scoped>
+p {
+  display: flex;
+  justify-content: center;
+}
+
+</style>
 
 ## Motivation
 
+![](images/gandalf.jpeg)
+
+Bro, I need your help!
+
 ---
 
-## Architure
 
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+![bg 50%](images/markdown.png)
+![bg 50%](images/right-arrow.png)
+![bg 50% contain](images/unnamed.png)
+
+## Motivation
+
+
+---
+
+## Basic Steps
+
+<div class="mermaid center">
+sequenceDiagram;
+    participant editor as react-simplemde-editor
+    participant tokenizer as markdown-it
+    editor->>tokenizer: raw text
+    participant parser
+    tokenizer->>parser: tokens
+    participant pdfmake as pdfmake
+    parser->>pdfmake: contents
+    pdfmake->>editor: PDF document
 </div>
+
+
+---
+
+## Render Mode
+
+<div class="column-2">
+Client/Sever Mode
+<div class="mermaid">
+sequenceDiagram;
+    client->>server: Text Data
+    rect rgba(200, 150, 255, .3)
+    client->>server: Image?
+    server-->server: Store Image
+    end
+    server->>client: PDF
+</div>
+
+Single Mode
+<div class="mermaid center">
+flowchart TD;
+    editor(Editor)-->text(Text Data)
+    editor-->image(Image)
+    text-->token(Token)
+    token-->content(Content)
+    image-->content
+    content-->PDF
+</div>
+</div>
+
+
+---
+
+## Features
+
+- Image Layout
+- Import/Export Document
+- Nested List
+- Pagination
+- PDF Anchor
+- Chinese Fonts
 
 ---
 

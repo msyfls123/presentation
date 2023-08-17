@@ -3,5 +3,11 @@
         "activityBar.background": "#541436",
         "titleBar.activeBackground": "#761C4C",
         "titleBar.activeForeground": "#FEFCFD"
-    }
+    },
+    "markdown.marp.themes": [
+        "./themes/custom.css"
+    ],
+    "markdown.styles": [
+        "./themes/custom.css"
+    ]
 }
