@@ -107,6 +107,53 @@ sequenceDiagram;
 
 ---
 
+## Visual Editor
+
+![bg right contain](images/simplemde-editor.jpg)
+
+- WYSIWG
+- **Pure Text Output**
+- Toolbar
+- Syntax Guide
+
+---
+
+## Tokenize
+
+![bg right 100% contain](images/tokens.jpg)
+
+
+- Nested Structure
+- Tags VS **Entity**
+- Pagination
+  - soft break
+  - paragraph
+
+---
+
+## Image?
+
+![bg right vertical](images/image.png)
+![bg](images/upload-image.gif)
+
+* Editor **NOT** support image upload. [#202](https://github.com/RIP21/react-simplemde-editor/issues/202)
+* Trade-off: external image uploading
+* Problem: Where to upload?
+
+---
+
+## Storage in JavaScript
+
+|Category|Items|Visibility|Query|
+|---|:--:|---|---|
+|Pure File|![width:100px](images/folder.png)|⭐⭐⭐|⭐|
+|Browser|![width:200px](images/indexeddb.png)|⭐⭐|⭐⭐⭐|
+|Server|![width:160px](images/sqlite.png) ![width:200px](images/leveldb.png)|⭐|⭐⭐⭐|
+
+</div>
+
+---
+
 ## Render Mode
 
 <div class="column-2">
@@ -115,10 +162,10 @@ Client/Sever Mode
 sequenceDiagram;
     client->>server: Text Data
     rect rgba(200, 150, 255, .3)
-    client->>server: Image?
+    client->>server: Image(latency, authentication)
     server-->server: Store Image
     end
-    server->>client: PDF
+    server->>client: PDF(latency)
 </div>
 
 Single Mode
@@ -133,15 +180,26 @@ flowchart TD;
 </div>
 </div>
 
+---
+
+## Pagination
+
+![bg right cover](images/pagination.jpg)
+
+* Precipitation（沉淀）
+* **Pagebreak among paragraphs** destroied my pagination algorithm
+* Two repositories, one dream.
+* PDFMake is also PDFKit
+* I'll always miss the time in struggling with pagination.
 
 ---
 
 ## Features
 
-- Image Layout
+- ~~Image Layout~~
 - Import/Export Document
 - Nested List
-- Pagination
+- ~~Pagination~~
 - PDF Anchor
 - Chinese Fonts
 
