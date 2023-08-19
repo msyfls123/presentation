@@ -59,7 +59,7 @@ Electron Application
 <!--
 _class: lead
 -->
-# MaTeX
+# [MaTeX](https://msyfls123.github.io/MaTeX/)
 
 Markdown-to-PDF editor
 
@@ -86,6 +86,23 @@ Bro, I need your help!
 ![bg 50% contain](images/unnamed.png)
 
 ## Motivation
+
+---
+
+## Why not Word?
+
+<div class="column-2">
+
+&nbsp;
+![width:550px](images/latex-word-markdown.png)
+
+&nbsp;
+- No installation
+- Easy to use
+- Open for extension
+
+_Outdated Tech Makes Workers Feel Less Productive, More Likely To Quit_
+</div>
 
 
 ---
@@ -168,7 +185,7 @@ sequenceDiagram;
     server->>client: PDF(latency)
 </div>
 
-Single Mode
+Single Mode ✅
 <div class="mermaid center">
 flowchart TD;
     editor(Editor)-->text(Text Data)
@@ -196,18 +213,84 @@ flowchart TD;
 
 ## Features
 
-- ~~Image Layout~~
-- Import/Export Document
-- Nested List
-- ~~Pagination~~
-- PDF Anchor
-- Chinese Fonts
+<div class="column-2">
+
+![width:500px](images/nest-list.jpg)
+Nested List
+
+&nbsp;
+![width:500px](images/preview-scroll-sync.gif)
+Preview Scroll Sync 🚫
+Fallback: `#page=xxx` anchor
+
+</div>
 
 ---
 
-## Known issues
+## Last Critical Problem
 
-- Not support images between paragraphs.
+<div class="column-2">
+
+![width:550px](images/chinese-fonts.jpg)
+
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:450px](images/simpsons-bugs.gif)
+</div>
+
+
+---
+
+## <ruby>> 27MB!<rt>Chinese fonts</rp></ruby>
+
+<div class="column-2">
+<div class="mermaid">
+sequenceDiagram;
+    autonumber
+    client->>server: Text Data
+    client->>server: Image
+    loop generatePDF
+        client->>server: Text Data
+        server->>client: PDF(expensive)
+    end
+</div>
+Client/Sever Mode
+
+<div class="mermaid center">
+flowchart TD;
+    fonts["load fonts(expensive, once)"]-->editor(Editor)
+    editor-->text
+    editor-->image(Image)
+    text-->content(Content)
+    image-->content
+    fonts-->content
+    content-->PDF
+    PDF-->editor
+</div>
+Single Mode ✅
+</div>
+
+
+---
+
+## Futhermore
+
+### User Feedback
+- Support import/export raw data(markdown text)
+- Pause/Resume PDF generation periodically
+- Deploying web application
+  Only domain bill, cloud object storage and CDN is **FREE**
+
+### Vision
+
+- Import & Export both text and images(zip format)
+
+---
+
+# Thanks 
+
+![bg right 55%](images/invisible_formatting.png)
+
+_To avoid errors like this, we render all text and pipe it through OCR before processing, fixing a handful of irregular bugs by burying them beneath a smooth, uniform layer of bugs._
 
 <script src="https://unpkg.com/mermaid@10.3.1/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
