@@ -292,5 +292,5 @@ Single Mode ✅
 
 _To avoid errors like this, we render all text and pipe it through OCR before processing, fixing a handful of irregular bugs by burying them beneath a smooth, uniform layer of bugs._
 
-<script src="https://unpkg.com/mermaid@10.3.1/dist/mermaid.min.js"></script>
+<script src="./images/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
