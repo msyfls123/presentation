@@ -12,6 +12,10 @@
     width: 60%;
 }
 
+.release-svg svg{
+    max-width: 720px !important;
+}
+
 .column-2 {
     column-count: 2;
 }

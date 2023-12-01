@@ -46,7 +46,7 @@ _class: lead
 
 “为什么我选择了前端这个职业？”
 在设计和后端之间
-<div class="mermaid center p60">
+<div class="mermaid center p60 release-svg">
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
     design([设计])
@@ -155,6 +155,74 @@ _class: lead
 - 粗放管理不再有效
 
 ![bg right](images/post-internet.jpeg)
+
+---
+
+# 程序员的价值
+
+<div class="mermaid center release-svg">
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart LR
+    maintainer(("`维护老旧系统
+    背锅`"))
+    explorer(("`开拓新的航路
+    获得未来市场
+    e.g AI`"))
+    promoter(("`鼓吹技术价值`"))
+    consultant(("`甄别技术价值`"))
+    trainer(("授人以渔"))
+    maintainer --- explorer
+    maintainer --- promoter
+    explorer --- consultant
+    promoter --- consultant
+    consultant --- trainer
+</div>
+
+---
+
+# 前端的价值
+
+- 最快捷的输出 UI
+- 最具兼容性的信息交互媒介
+- 海量的成熟工具库
+- 最激进的技术试验田
+- 最广泛的 HTTP 接口适配
+
+![bg right](images/front-end-career.jpeg)
+
+---
+
+# 互联网各职业的未来
+
+- 产品经理 -> 销售
+- 视觉设计 -> Midjourney / Stable Diffusion 参数调节器
+- 交互设计 -> 人类行为实验员
+- 后端 -> 云操作系统开发
+- 客户端 -> 嵌入式开发
+- 前端 -> All of **旧互联网**
+
+---
+
+# 前端的未来
+
+- 大一统的构建发布方式（所有特性随便写随便用，自动分析性能瓶颈）
+- 制定文档描述规范，类似 RSS，一种实践是 Headless CMS
+- WebRTC P2P 实时通讯
+- 离线优先的边缘计算
+- 混合输入（语音、视觉、其他传感器）
+
+---
+
+## 令人心动的简历💓 
+
+![width:500px](images/s-wars-2.jpeg)
+![bg right](images/s-wars-1.jpeg)
+
+---
+
+# Thank you
+
+![bg right 50%](images/qrcode.jpg)
 
 <script src="./images/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
